@@ -285,37 +285,30 @@ body {
 }
 
 
-/* Deploy this with images as direct "children" and the images should pop into shape */
-.grid {
+.middle_section{
     display: flex;
+    border: solid;
+    background-color: rgba(247, 201, 74, 0.7);
+    flex: 1 2 auto;
+    margin: 1rem;
+    align-items: stretch;
+    align-content: stretch;
     justify-content: space-evenly;
-    flex-flow: wrap;
-    width: 350px;
-    height: 350px;
-    margin: 0 auto;
-  }
-  
-.grid img {
-    width: 150px;
-    height: 150px;
 }
   
   
   /* Carousel */
-.carousel {
-    max-width: 500px;
-    overflow: hidden;
+div.carousel {
+    width: 1000px;
     text-align: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    margin-bottom: 1rem;
     border: solid;
+    justify-content: space-between;
+    align-items: center;
 }
-  
-.carousel .slides {
+
+.slides {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -333,7 +326,7 @@ body {
 }
   
 .carousel_item img {
-    width: 150px; 
+    width: 500px; 
 }
   
 .prev,.next {
@@ -371,14 +364,6 @@ body {
     margin: 0 auto;
 }
 
-.middle_section{
-    display: flex;
-    border: solid;
-    background-color: rgba(255, 224, 138, 0.7);
-    flex: 1 2 auto;
-    margin: 1rem;
-    align-items: center;
-}
 
 .bestPlayers{
     display: flex;
