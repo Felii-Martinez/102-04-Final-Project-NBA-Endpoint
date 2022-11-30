@@ -1,0 +1,260 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px dashed;
+    border-radius: 6px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+  
+    font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: rgb(240, 161, 161);
+}
+
+.celtics{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;   
+}
+
+.bucks{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;  
+}
+
+.cavaliers{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content; 
+}
+
+.pacers{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content; 
+}
+
+.seventy_sixers{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content; 
+}
+
+.raptors{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content; 
+}
+
+.wizards{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.hawks{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.nets{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.heat{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.knicks{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.bulls{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.hornets{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.magic{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content; 
+}
+
+.pistons{ 
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content; 
+}
+
+.suns{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.nuggets{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content; 
+}
+
+.pelicans{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;  
+}
+
+.grizzlies{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content; 
+}
+
+.clippers{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.trail_blazors{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.kings{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.jazz{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.mavericks{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.warriors{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content; 
+}
+.timberwolves{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content; 
+}
+
+.thunder{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+}
+
+.lakers{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content; 
+}
+
+.spurs{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content; 
+}
+
+.rockets{
+    display: flex;
+    border: solid;
+    align-items: center;
+    width: 200px;
+    height: fit-content; 
+}
