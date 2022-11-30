@@ -23,7 +23,7 @@ function updateSlidePosition() {
     slide.classList.remove('visible');
     slide.classList.add('hidden');
   });
-  console.log(slidePosition);
+  document.write(slidePosition);
   slides[slidePosition].classList.add('visible');
 }
 
@@ -65,11 +65,11 @@ document
   .querySelector('.next') // Get the appropriate element (<button class="next">)
   .addEventListener('click', () => {
     // set an event listener on it - when it's clicked, do this callback function
-    console.log('clicked next'); // let's tell the client console we made it to this point in the script
+    document.write('clicked next'); // let's tell the client console we made it to this point in the script
     moveToNextSlide(); // call the function above to handle this
   });
 
 document.querySelector('.prev').addEventListener('click', () => {
-  console.log('clicked prev');
+  document.write('clicked prev');
   moveToPrevSlide();
 });
