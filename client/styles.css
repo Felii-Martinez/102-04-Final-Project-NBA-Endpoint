@@ -315,9 +315,13 @@ body {
 }
 
 .logos{
-    max-width: 50px;
+    height: 100px;
+      width: 100px;
 }
 
+.celtics_stat{
+    display:block;
+}
 
 .middle_section{
     display: flex;
