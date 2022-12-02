@@ -48,7 +48,7 @@ body {
 .celtics{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center; 
@@ -57,7 +57,7 @@ body {
 .bucks{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -66,7 +66,7 @@ body {
 .cavaliers{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center; 
@@ -75,7 +75,7 @@ body {
 .pacers{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -84,7 +84,7 @@ body {
 .seventy_sixers{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -93,7 +93,7 @@ body {
 .raptors{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -102,7 +102,7 @@ body {
 .wizards{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -111,7 +111,7 @@ body {
 .hawks{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -120,7 +120,7 @@ body {
 .nets{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -129,7 +129,7 @@ body {
 .heat{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -138,7 +138,7 @@ body {
 .knicks{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -147,7 +147,7 @@ body {
 .bulls{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -156,7 +156,7 @@ body {
 .hornets{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -165,7 +165,7 @@ body {
 .magic{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -174,7 +174,7 @@ body {
 .pistons{ 
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center; 
@@ -183,7 +183,7 @@ body {
 .suns{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -192,7 +192,7 @@ body {
 .nuggets{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center; 
@@ -201,7 +201,7 @@ body {
 .pelicans{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;  
@@ -210,7 +210,7 @@ body {
 .grizzlies{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -219,7 +219,7 @@ body {
 .clippers{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -228,7 +228,7 @@ body {
 .trail_blazors{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -237,7 +237,7 @@ body {
 .kings{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -246,7 +246,7 @@ body {
 .jazz{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -255,7 +255,7 @@ body {
 .mavericks{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -264,7 +264,7 @@ body {
 .warriors{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -272,7 +272,7 @@ body {
 .timberwolves{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center; 
@@ -281,7 +281,7 @@ body {
 .thunder{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -290,7 +290,7 @@ body {
 .lakers{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -299,7 +299,7 @@ body {
 .spurs{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -308,10 +308,14 @@ body {
 .rockets{
     display: flex;
     border: solid;
-    width: 200px;
+    width: 300px;
     height: fit-content;
     flex-direction: column;
     align-items: center; 
+}
+
+.logos{
+    max-width: 50px;
 }
 
 
