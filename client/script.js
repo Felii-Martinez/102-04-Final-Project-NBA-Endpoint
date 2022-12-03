@@ -76,10 +76,10 @@ function team_stats(list) {
   console.log('fired teasm_stats');
   let team_stats_array = [];
   for (let i = 0; i < list.length; i++){
-    team_stats_array.push(list.conference.name);
-    team_stats_array.push(list.conference.rank);
-    team_stats_array.push(list.conference.win);
-    team_stats_array.push(list.conference.lost);
+    team_stats_array.push(list.response.conference.name);
+    team_stats_array.push(list.response.conference.rank);
+    team_stats_array.push(list.response.conference.win);
+    team_stats_array.push(list.response.conference.lost);
   }
   return team_stats_array;
 }
@@ -94,6 +94,7 @@ function celtic_stats(list){    //passing team_stats, celtic is represented by t
   return celtic_stats_array;
 }
 
+// MAinEvent, This is where i call the API
 async function mainEvent() {
   const options = {
     method: 'GET',
@@ -107,7 +108,7 @@ async function mainEvent() {
   const standings_response = await standings.json();
 
   // This IF statement ensures we can't do anything if we don't have information yet
-  if (standings_response.data?.length > 0) { // the question mark in this means "if this is set at all"
+  // the question mark in this means "if this is set at all"
     const nba_teams_stats = team_stats(standings_response);
     console.log(nba_teams_stats);
 
@@ -120,7 +121,7 @@ async function mainEvent() {
 
 
 
-  }
+  
 
 
 }
