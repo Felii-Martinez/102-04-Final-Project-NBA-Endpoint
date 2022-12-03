@@ -14,7 +14,6 @@ html {
     text-size-adjust: 100%;
 }
 
-
 .header {
     display: flex;
     align-items: center;
@@ -26,7 +25,6 @@ html {
 * {
     box-sizing: border-box;
 }
-
 
 body {
     margin: 0;
@@ -316,10 +314,12 @@ body {
 }
 
 
-
 .celtics_stat{
     display: flex;
-    border: dashed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
     width: 150px;
     height: 150px; 
 }
@@ -403,7 +403,6 @@ div.carousel {
     margin: 0 auto;
 }
 
-
 .bestPlayers{
     display: flex;
     border:solid;
@@ -411,4 +410,35 @@ div.carousel {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.row-element{
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width:100%;
+    padding:5px;
+    font-size:15px;
+}
+#example{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin:auto;
+    width:fit-content;
+}
+
+.team-element{
+    width:200px;
+    border: 2px solid black;
+    border-radius:10px;
+    margin: 5px;
+  
+}
+.team-element h1{
+    text-align: center;
+    font-size: 15px;
 }

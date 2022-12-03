@@ -1,7 +1,7 @@
 let slidePosition = 0;
 
 // gather a reference to every slide we're using via the class name and querySelectorAll
-const slides = document.querySelectorAll('.carousel_item');
+const slides = document.querySelectorAll(".carousel_item");
 
 // change that "NodeList" into a Javascript "array", to get access to "array methods"
 const slidesArray = Array.from(slides);
@@ -11,11 +11,11 @@ const totalSlides = slidesArray.length;
 
 function updateSlidePosition() {
   slidesArray.forEach((slide) => {
-    slide.classList.remove('visible');
-    slide.classList.add('hidden');
+    slide.classList.remove("visible");
+    slide.classList.add("hidden");
   });
   console.log(slidePosition);
-  slides[slidePosition].classList.add('visible');
+  slides[slidePosition].classList.add("visible");
 }
 
 function moveToNextSlide() {
@@ -40,90 +40,94 @@ function moveToPrevSlide() {
   to the elements accessed by the "querySelector" set to the class name on each
 */
 document
-  .querySelector('.next') // Get the appropriate element (<button class="next">)
-  .addEventListener('click', () => {
+  .querySelector(".next") // Get the appropriate element (<button class="next">)
+  .addEventListener("click", () => {
     // set an event listener on it - when it's clicked, do this callback function
-    console.log('clicked next'); // let's tell the client console we made it to this point in the script
+    console.log("clicked next"); // let's tell the client console we made it to this point in the script
     moveToNextSlide(); // call the function above to handle this
   });
 
-document.querySelector('.prev').addEventListener('click', () => {
-  console.log('clicked prev');
+document.querySelector(".prev").addEventListener("click", () => {
+  console.log("clicked prev");
   moveToPrevSlide();
 });
 
-function injectHTML_Celtics(list) {
-  console.log('fired injectHTML_Celtics');
-  const target = document.querySelector('celtics_stat'); 
-  target.innerHTML = '';
-  const listEl = document.createElement('ul');
-  target.appendChild(listEl);
-  const el = document.createElement('li');
-  const e2 = document.createElement('li');
-  const e3 = document.createElement('li');
-  const e4 = document.createElement('li');
-  el.innerText = list[0].name;
-  e2.innerText = list[1].rank;
-  e3.innerText = list[2].win;
-  e4.innerText = list[3].lose;
-  listEl.appendChild(el);
-  listEl.appendChild(e2);
-  listEl.appendChild(e3);
-  listEl.appendChild(e4);
-}
-
-function team_stats(list) {
-  console.log('fired teasm_stats');
-  let team_stats_array = [];
-  for (let i = 0; i < list.length; i++){
-    team_stats_array.push(list.response.conference.name);
-    team_stats_array.push(list.response.conference.rank);
-    team_stats_array.push(list.response.conference.win);
-    team_stats_array.push(list.response.conference.lost);
-  }
-  return team_stats_array;
-}
-
-function celtic_stats(list){    //passing team_stats, celtic is represented by the first 4 index. 
-                                // Every 4 index is a new team
-  let celtic_stats_array = [];
-  celtic_stats_array.push(list[0]);
-  celtic_stats_array.push(list[1]);
-  celtic_stats_array.push(list[2]);
-  celtic_stats_array.push(list[3]);
-  return celtic_stats_array;
-}
-
-// MAinEvent, This is where i call the API
 async function mainEvent() {
   const options = {
-    method: 'GET',
+    method: "GET",
     headers: {
-      'X-RapidAPI-Key': '788121d3a2msh37c568f9d110a05p1f092fjsn2fe64f26d082',
-      'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
-    }
+      "X-RapidAPI-Key": "788121d3a2msh37c568f9d110a05p1f092fjsn2fe64f26d082",
+      "X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com",
+    },
   };
 
-  const standings = await fetch('https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022', options);
+  const standings = await fetch(
+    "https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022",
+    options
+  );
   const standings_response = await standings.json();
+  const divEl = document.getElementById("example");
 
-  // This IF statement ensures we can't do anything if we don't have information yet
-  // the question mark in this means "if this is set at all"
-    const nba_teams_stats = team_stats(standings_response);
-    console.log(nba_teams_stats);
-
-    const celticRecord = celtic_stats(nba_teams_stats);
-    console.log(celticRecord);
-
-    injectHTML_Celtics(celticRecord);
-
-    
-
-
-
-  
-
-
+  standings_response.response.map((team) => {
+    addElements(team, divEl);
+  });
 }
 
-document.addEventListener('DOMContentLoaded', async () => mainEvent()); // the async keyword means we can make API requests
+const addElements = (element, parentElement) => {
+  const divEl = document.createElement("div");
+  divEl.classList.add("team-element");
+
+  const headerEl = document.createElement("h1");
+  headerEl.innerHTML = element.team.name;
+  const divRow = document.createElement("div");
+
+  const row1 = document.createElement("div");
+  const leftEl1 = document.createElement("div");
+  const rightEl1 = document.createElement("div");
+  leftEl1.innerHTML = `conference:`;
+  rightEl1.innerHTML = `${element.conference.name}`;
+  row1.classList.add("row-element");
+  row1.appendChild(leftEl1);
+  row1.appendChild(rightEl1);
+
+  const row2 = document.createElement("div");
+  row2.classList.add("row-element");
+  const leftEl2 = document.createElement("div");
+  const rightEl2 = document.createElement("div");
+  leftEl2.innerHTML = `rank:`;
+  rightEl2.innerHTML = `${element.conference.rank}`;
+
+  row2.appendChild(leftEl2);
+  row2.appendChild(rightEl2);
+
+  const row3 = document.createElement("div");
+  row3.classList.add("row-element");
+  const leftEl3 = document.createElement("div");
+  const rightEl3 = document.createElement("div");
+  leftEl3.innerHTML = `win:`;
+  rightEl3.innerHTML = `${element.conference.win}`;
+
+  row3.appendChild(leftEl3);
+  row3.appendChild(rightEl3);
+
+  const row4 = document.createElement("div");
+  row4.classList.add("row-element");
+  const leftEl4 = document.createElement("div");
+  const rightEl4 = document.createElement("div");
+  leftEl4.innerHTML = `loss:`;
+  rightEl4.innerHTML = `${element.conference.loss}`;
+
+  row4.appendChild(leftEl4);
+  row4.appendChild(rightEl4);
+
+  divRow.appendChild(row1);
+  divRow.appendChild(row2);
+  divRow.appendChild(row3);
+  divRow.appendChild(row4);
+
+  divEl.appendChild(headerEl);
+  divEl.appendChild(divRow);
+  parentElement.appendChild(divEl);
+};
+
+document.addEventListener("DOMContentLoaded", async () => mainEvent()); // the async keyword means we can make API requests
