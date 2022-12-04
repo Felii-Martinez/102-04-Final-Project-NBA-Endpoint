@@ -48,11 +48,17 @@ document
   });
 
 document.querySelector(".prev").addEventListener("click", () => {
-  console.log("clicked prev");
   moveToPrevSlide();
 });
 
-async function mainEvent() {
+document.getElementById("search-btn").addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  let season = document.getElementById("season-select").value;
+
+  mainEvent(season);
+});
+async function mainEvent(season) {
   const options = {
     method: "GET",
     headers: {
@@ -62,23 +68,70 @@ async function mainEvent() {
   };
 
   const standings = await fetch(
-    "https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022",
+    `https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=${season}`,
     options
   );
   const standings_response = await standings.json();
+  document.getElementById("example").innerHTML = "";
   const divEl = document.getElementById("example");
-
+  let westWin = [];
+  let westLose = [];
+  let eastWin = [];
+  let eastLose = [];
   standings_response.response.map((team) => {
-    addElements(team, divEl);
+    if (team.conference.name == "west") {
+      // objWest.y = objWest.y + Number(team.conference.win);
+      westWin.push({
+        label: team.team.name,
+        y: team.conference.win,
+      });
+      westLose.push({
+        label: team.team.name,
+        y: team.conference.loss,
+      });
+    } else {
+      eastWin.push({
+        label: team.team.name,
+        y: team.conference.win,
+      });
+      eastLose.push({
+        label: team.team.name,
+        y: team.conference.loss,
+      });
+    }
+
+    addElements(team, divEl, team.team.logo);
   });
+
+  drawChart(
+    westWin,
+    westLose,
+    "chartContainer",
+    "NBA West statics -Season: " + season
+  );
+  drawChart(
+    eastWin,
+    eastLose,
+    "chartContainer2",
+    "NBA East statics -Season: " + season
+  );
 }
 
-const addElements = (element, parentElement) => {
+const addElements = (element, parentElement, src) => {
   const divEl = document.createElement("div");
   divEl.classList.add("team-element");
 
-  const headerEl = document.createElement("h1");
-  headerEl.innerHTML = element.team.name;
+  const headerEl = document.createElement("div");
+
+  const imgEl = document.createElement("img");
+  imgEl.src = src;
+  imgEl.classList.add("logos");
+  headerEl.appendChild(imgEl);
+  const headerH1 = document.createElement("h1");
+  headerH1.innerHTML = element.team.name;
+  headerEl.appendChild(headerH1);
+  headerEl.classList.add("header-teams");
+
   const divRow = document.createElement("div");
 
   const row1 = document.createElement("div");
@@ -130,4 +183,36 @@ const addElements = (element, parentElement) => {
   parentElement.appendChild(divEl);
 };
 
-document.addEventListener("DOMContentLoaded", async () => mainEvent()); // the async keyword means we can make API requests
+function drawChart(win, lose, container, title) {
+  var chart = new CanvasJS.Chart(container, {
+    theme: "light1", // "light2", "dark1", "dark2"
+    animationEnabled: false, // change to true
+    title: {
+      text: title,
+    },
+    data: [
+      {
+        // Change type to "bar", "area", "spline", "pie",etc.
+        type: "column",
+        showInLegend: true,
+
+        legendText: "win",
+        dataPoints: win,
+      },
+      {
+        // Change type to "bar", "area", "spline", "pie",etc.
+        type: "column",
+        showInLegend: true,
+
+        legendText: "lose",
+        dataPoints: lose,
+      },
+    ],
+    axisX: {
+      labelFontSize: 8,
+    },
+  });
+  chart.render();
+}
+
+document.addEventListener("DOMContentLoaded", async () => mainEvent("2022")); // the async keyword means we can make API requests
