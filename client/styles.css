@@ -168,9 +168,9 @@ div.carousel {
 }
 
 form{
-    width:60%;
+    width:250px;
     padding:20px;
-    background-color: white;
+    background-color: rgb(252, 143, 143);
     border-radius: 10px;
     display: flex;
     gap:10px;
@@ -182,9 +182,9 @@ form select{
     width:100%;
 }
 form  button{
-    width:100%;
+    width:100px;
     padding:10px;
-    background-color: greenyellow;
+    background-color: rgb(255, 255, 255);
     border:none;
     outline:none;
     border-radius:10px;
